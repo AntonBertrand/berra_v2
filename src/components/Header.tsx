@@ -162,15 +162,8 @@ export function Header() {
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Programs
+              Services
             </NavLink>
-            <a
-              href="#blog"
-              className="px-4 py-2 text-white hover:bg-gray-800 rounded"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Blog
-            </a>
             <NavLink
               to="/contact"
               className={({ isActive }) =>
@@ -180,13 +173,6 @@ export function Header() {
             >
               Contact
             </NavLink>
-            <a
-              href="#testimonial"
-              className="px-4 py-2 text-white hover:bg-gray-800 rounded"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Testimonial
-            </a>
             <div className="pt-4 px-4 w-full flex flex-col items-center gap-4">
               <div className="flex items-center gap-3">
                 <a
