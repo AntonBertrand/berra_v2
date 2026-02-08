@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif !important;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+  background-color-2: #00aa4d;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+
+}
+
+
+/* Override for header links to be white */
+header a {
+  color: white !important;
+}
+
+header a:hover {
+  color: #60a5fa !important;
+}
+
+/* Keep CTA button same colour on hover (no blue override) */
+header a.bg-primary:hover {
+  color: white !important;
+}
+
+/* Override for CTA section links to be white */
+section.bg-gray-900 a {
+  color: white !important;
+}
+
+section.bg-gray-900 a:hover {
+  color: white !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #ffffff;
+  color: #213547;
+}
+
+h1 {
+  line-height: 1.1;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif !important;
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+}
+
+@keyframes bounce-subtle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.group:hover .chevron-bounce {
+  animation: bounce-subtle 0.5s ease-in-out;
+}
