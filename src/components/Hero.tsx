@@ -27,7 +27,10 @@ export function Hero() {
             <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Berra Ltd
             </span>
-            <span className="block w-12 h-0.5 bg-primary rounded-full" aria-hidden />
+            <span
+              className="block w-12 h-0.5 bg-primary rounded-full"
+              aria-hidden
+            />
           </div>
 
           {/* Headline */}
@@ -37,7 +40,9 @@ export function Hero() {
 
           {/* Subhead */}
           <p className="mt-5 sm:mt-6 text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
-            Commercial and residential projects delivered to the highest standards—stud walls, suspended ceilings, and full fit-outs. On time, on budget.
+            Commercial, residential and private projects delivered to the
+            highest standards—stud walls, suspended ceilings, and full fit-outs.
+            On time, on budget.
           </p>
 
           {/* CTAs */}

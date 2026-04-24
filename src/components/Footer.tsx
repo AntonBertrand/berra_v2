@@ -25,7 +25,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Commercial drylining specialists. On time, on spec, on budget.
+              Drylining specialists. On time, on spec, on budget.
             </p>
             <Link
               to="/contact"
