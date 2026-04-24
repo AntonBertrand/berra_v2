@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import IMAGE_1 from "../assets/services-1.jpg";
 import IMAGE_2 from "../assets/services-2.jpg";
 import IMAGE_3 from "../assets/services-3.jpg";
-import IMAGE_4 from "../assets/services-4.jpg";
+import IMAGE_4 from "../assets/sfs-thumbnail.jpg";
 import IMAGE_5 from "../assets/services-5.jpg";
 import IMAGE_6 from "../assets/services-6.jpg";
 
@@ -36,21 +36,21 @@ export function Services() {
       id: "steel-framed-systems",
       title: "Steel framed systems (SFS)",
       description:
-        "Steel framed systems for structural and non-structural applications. Expert design and erection of SFS for new build and refurbishment projects.",
+        "Steel framed systems for structural and non-structural applications. We install SFS based on the client's provided design, for new build and refurbishment projects.",
       image: SERVICE_IMAGES[3],
     },
     {
       id: "facades",
       title: "Facades",
       description:
-        "Facade design, supply and installation. Curtain walling, cladding and external envelope solutions for commercial and residential developments.",
+        "Curtain walling, cladding and external envelope installation for commercial and residential developments. We carry out installation based on the client's design.",
       image: SERVICE_IMAGES[4],
     },
     {
       id: "specialist-fit-out",
       title: "Specialist fit-out items",
       description:
-        "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls, we deliver tailored solutions to specification.",
+        "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls—including glazing partitions and acoustic panels—we deliver tailored solutions to specification.",
       image: SERVICE_IMAGES[5],
     },
   ];

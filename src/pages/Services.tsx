@@ -5,7 +5,7 @@ import HERO_IMAGE from "../assets/hero-img.png";
 import IMAGE_1 from "../assets/services-1.jpg";
 import IMAGE_2 from "../assets/services-2.jpg";
 import IMAGE_3 from "../assets/services-3.jpg";
-import IMAGE_4 from "../assets/services-4.jpg";
+import IMAGE_4 from "../assets/sfs-thumbnail.jpg";
 import IMAGE_5 from "../assets/services-5.jpg";
 import IMAGE_6 from "../assets/services-6.jpg";
 
@@ -64,31 +64,31 @@ const EXPANDED_SERVICES = [
     id: "steel-framed-systems",
     title: "Steel framed systems (SFS)",
     summary:
-      "Steel framed systems for structural and non-structural applications. Expert design and erection of SFS for new build and refurbishment projects.",
+      "Steel framed systems for structural and non-structural applications. We install SFS based on the client's provided design, for new build and refurbishment projects.",
     image: SERVICE_IMAGES[3],
     content: [
-      "We design and erect steel framed systems (SFS) for both structural and non-structural applications in new build and refurbishment projects. SFS provides a fast, accurate frame for internal and external walls, often used with cladding, curtain wall and drylining packages.",
-      "Our involvement can include design coordination, supply and erection, working alongside main contractors and MEP teams. We focus on programme, tolerance and interface details so the frame integrates correctly with follow-on trades. SFS is well suited to multi-storey commercial and residential buildings where speed and consistency are important.",
+      "We install steel framed systems (SFS) based on the client's provided design, for both structural and non-structural applications in new build and refurbishment projects. SFS provides a fast, accurate frame for internal and external walls, often used with cladding, curtain wall and drylining packages.",
+      "Our involvement covers supply and erection, working alongside main contractors and MEP teams. We focus on programme, tolerance and interface details so the frame integrates correctly with follow-on trades. SFS is well suited to multi-storey commercial and residential buildings where speed and consistency are important.",
     ],
     points: [
-      "Structural and non-structural SFS design and erection",
+      "Structural and non-structural SFS installation",
       "New build and refurbishment experience",
-      "Design coordination and interface with cladding and MEP",
+      "Interface with cladding and MEP trades",
     ],
   },
   {
     id: "facades",
     title: "Facades",
     summary:
-      "Facade design, supply and installation. Curtain walling, cladding and external envelope solutions for commercial and residential developments.",
+      "Curtain walling, cladding and external envelope installation for commercial and residential developments. We carry out installation based on the client's design.",
     image: SERVICE_IMAGES[4],
     content: [
-      "We deliver facade solutions including curtain walling, cladding and external envelope systems for commercial and residential developments. Our scope covers design support, supply and installation so the building's weather performance, thermal behaviour and appearance meet the project brief.",
-      "We work with unitised and stick curtain wall, rainscreen cladding and other envelope systems, and we coordinate with structural and MEP interfaces. Whether the facade is predominantly glazed or clad, we aim for a robust, buildable solution that meets design intent and regulatory requirements.",
+      "We carry out facade installation including curtain walling, cladding and external envelope systems for commercial and residential developments, working from the client's provided design. Our scope covers supply and installation so the building's weather performance, thermal behaviour and appearance meet the project brief.",
+      "We work with unitised and stick curtain wall, rainscreen cladding and other envelope systems, and we coordinate with structural and MEP interfaces. Whether the facade is predominantly glazed or clad, we deliver a robust, compliant installation that meets the specified design intent and regulatory requirements.",
     ],
     points: [
       "Curtain walling, cladding and external envelope systems",
-      "Design support, supply and installation",
+      "Supply and installation based on client's design",
       "Thermal and weather performance to specification",
     ],
   },
@@ -96,16 +96,17 @@ const EXPANDED_SERVICES = [
     id: "specialist-fit-out",
     title: "Specialist fit-out items",
     summary:
-      "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls, we deliver tailored solutions to specification.",
+      "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls—including glazing partitions and acoustic panels—we deliver tailored solutions to specification.",
     image: SERVICE_IMAGES[5],
     content: [
-      "Our specialist fit-out and joinery service covers bespoke elements for commercial and high-spec interiors—reception desks, feature walls, panelling, bulkheads and other made-to-order items. We work from your design or specification to produce tailored solutions that align with the overall interior package.",
-      "We manage design development, material selection, manufacture and installation, and we coordinate with base build and other fit-out trades. The result is a cohesive interior where specialist items are delivered to the right quality and programme.",
+      "Our specialist fit-out and joinery service covers bespoke elements for commercial and high-spec interiors—reception desks, feature walls, panelling, bulkheads, glazing partitions, acoustic panels and other made-to-order items. We work from your design or specification to produce tailored solutions that align with the overall interior package.",
+      "We manage material selection, manufacture and installation, and we coordinate with base build and other fit-out trades. The result is a cohesive interior where specialist items are delivered to the right quality and programme.",
     ],
     points: [
       "Bespoke joinery and fit-out to design or specification",
       "Reception areas, feature walls, panelling and bulkheads",
-      "Design, manufacture and installation coordinated with other trades",
+      "Installation of glazing partitions",
+      "Installation of acoustic panels",
     ],
   },
 ];

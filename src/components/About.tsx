@@ -27,10 +27,10 @@ export function About() {
             id="about-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.15] mb-4"
           >
-            Commercial drylining specialists
+            Drylining specialists
           </h2>
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-            A specialist commercial drylining contractor delivering high-performance interior and external systems for large-scale developments.
+            A specialist drylining contractor delivering high-performance interior and external systems across commercial, residential, and private projects.
           </p>
         </header>
 
@@ -39,17 +39,18 @@ export function About() {
           <div className="relative">
             <div className="space-y-5 mb-8">
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                Berra is a specialist commercial drylining contractor delivering
-                high-performance interior and external systems for large-scale
-                developments across the commercial sector.
+                Berra is a specialist drylining contractor delivering
+                high-performance interior and external systems across commercial,
+                residential, and private projects.
               </p>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed pl-5 border-l-4 border-secondary">
-                We work exclusively on commercial projects, partnering with main
-                contractors and developers to provide structured, compliant, and
-                programme-driven solutions. From office blocks and retail units
-                to mixed-use and large infrastructure schemes, we understand the
-                demands of commercial construction — tight deadlines, strict
-                specifications, and zero margin for error.
+                We work across commercial, residential, and private projects,
+                partnering with main contractors, developers, and private clients
+                to provide structured, compliant, and programme-driven solutions.
+                From office blocks and retail units to residential developments
+                and private commissions, we understand the demands of each
+                sector — tight deadlines, strict specifications, and zero margin
+                for error.
               </p>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 At Berra, we focus on quality workmanship, safety, and
