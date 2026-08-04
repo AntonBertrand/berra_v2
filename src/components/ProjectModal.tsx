@@ -224,13 +224,16 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <span className="block h-0.5 w-6 rounded-full bg-secondary" />
           </div>
 
-          <dl className="mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-gray-200 bg-gray-200 sm:grid-cols-2">
+          <dl className="mt-6 divide-y divide-gray-200">
             {details.map((detail) => (
-              <div key={detail.label} className="bg-white p-4">
-                <dt className="text-[11px] font-semibold uppercase tracking-wider text-gray-500">
+              <div
+                key={detail.label}
+                className="flex items-baseline justify-between gap-6 py-3.5"
+              >
+                <dt className="shrink-0 text-[11px] font-semibold uppercase tracking-wider text-gray-500">
                   {detail.label}
                 </dt>
-                <dd className="mt-1 text-sm font-semibold text-gray-900">
+                <dd className="text-right text-sm font-bold text-gray-900">
                   {detail.value}
                 </dd>
               </div>
