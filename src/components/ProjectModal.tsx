@@ -115,12 +115,17 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         if (event.target === event.currentTarget) onClose();
       }}
     >
+      {/*
+        max-h-full (not a vh cap) keeps the panel inside the fixed overlay:
+        mobile browsers resolve vh against the URL-bar-hidden viewport, so a
+        vh cap overflows a centred panel off both the top and the bottom.
+      */}
       <div
         ref={panelRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-modal-title"
-        className="relative flex w-full max-w-6xl max-h-[92vh] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl lg:h-[80vh] lg:min-h-[540px] lg:flex-row"
+        className="relative flex max-h-full w-full max-w-6xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl lg:h-[80vh] lg:min-h-[540px] lg:flex-row"
       >
         <button
           ref={closeRef}
@@ -134,7 +139,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         {/* Slideshow */}
         <div className="flex shrink-0 flex-col bg-tertiary lg:w-[58%] lg:shrink">
-          <div className="relative aspect-[4/3] w-full overflow-hidden sm:aspect-[16/10] lg:aspect-auto lg:flex-1">
+          <div className="relative aspect-[4/3] max-h-[40dvh] w-full overflow-hidden sm:aspect-[16/10] sm:max-h-[45dvh] lg:aspect-auto lg:max-h-none lg:flex-1">
             <img
               key={project.images[index]}
               src={project.images[index]}
@@ -198,7 +203,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         </div>
 
         {/* Details */}
-        <div className="flex-1 overflow-y-auto p-6 sm:p-8 lg:w-[42%]">
+        {/* min-h-0 lets this flex child shrink so its own scrollbar engages */}
+        <div className="min-h-0 flex-1 overflow-y-auto p-6 sm:p-8 lg:w-[42%]">
           <span className="inline-flex items-center rounded-md bg-primary/15 border border-primary/30 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
             {project.category}
           </span>
