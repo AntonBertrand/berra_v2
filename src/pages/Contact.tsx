@@ -20,13 +20,13 @@ const CONTACT_ITEMS = [
     icon: Instagram,
     label: "Instagram",
     value: "@Berra_Ltd",
-    href: "https://www.instagram.com/berra-ltd",
+    href: "https://www.instagram.com/berra_ltd",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     value: "@Berra_Ltd",
-    href: "https://www.linkedin.com/company/berra-ltd",
+    href: "https://www.linkedin.com/company/berra-ltd/",
   },
 ];
 

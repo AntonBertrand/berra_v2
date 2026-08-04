@@ -4,8 +4,8 @@ import { Menu, X, ArrowRight, Linkedin, Instagram } from "lucide-react";
 import LOGO from "../assets/logo-1.png";
 
 const SCROLL_THRESHOLD = 20;
-const LINKEDIN_URL = "https://linkedin.com/company/your-company";
-const INSTAGRAM_URL = "https://instagram.com/your-company";
+const LINKEDIN_URL = "https://www.linkedin.com/company/berra-ltd/";
+const INSTAGRAM_URL = "https://www.instagram.com/berra_ltd";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,6 +65,23 @@ export function Header() {
               {({ isActive }) => (
                 <>
                   Services
+                  <span
+                    className={`absolute bottom-0 left-0 right-0 h-0.5 bg-secondary origin-left transition-transform duration-300 ease-out ${
+                      isActive
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  />
+                </>
+              )}
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className="group relative inline-block !text-gray-900 hover:!text-primary-50 transition-colors duration-200 pb-0.5"
+            >
+              {({ isActive }) => (
+                <>
+                  Projects
                   <span
                     className={`absolute bottom-0 left-0 right-0 h-0.5 bg-secondary origin-left transition-transform duration-300 ease-out ${
                       isActive
@@ -163,6 +180,15 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Services
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                `px-4 py-2 text-white hover:bg-gray-800 rounded ${isActive ? "underline decoration-2 decoration-secondary" : ""}`
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projects
             </NavLink>
             <NavLink
               to="/contact"

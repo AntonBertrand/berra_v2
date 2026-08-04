@@ -63,6 +63,12 @@ export function Footer() {
                   Services
                 </Link>
                 <Link
+                  to="/projects"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+                >
+                  Projects
+                </Link>
+                <Link
                   to="/contact"
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
                 >
@@ -80,7 +86,7 @@ export function Footer() {
               />
               <div className="flex items-center gap-2">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/berra_ltd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-secondary hover:text-tertiary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-tertiary"
@@ -89,7 +95,7 @@ export function Footer() {
                   <Instagram className="h-4 w-4" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/berra-ltd/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-secondary hover:text-tertiary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-tertiary"

@@ -41,7 +41,7 @@ export function Hero() {
           {/* Subhead */}
           <p className="mt-5 sm:mt-6 text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
             Commercial, residential and private projects delivered to the
-            highest standards—stud walls, suspended ceilings, and full fit-outs.
+            highest standards, stud walls, suspended ceilings, and full fit-outs.
             On time, on budget.
           </p>
 

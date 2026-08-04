@@ -1,34 +1,13 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import IMAGE_1 from "../assets/img-1.jpg";
-import IMAGE_2 from "../assets/img-2.jpg";
-import IMAGE_3 from "../assets/img-3.jpg";
-
-const PROJECTS = [
-  {
-    title: "Office Development",
-    category: "Commercial",
-    description:
-      "Full drylining and partitioning package for a multi-storey office scheme.",
-    image: IMAGE_1,
-  },
-  {
-    title: "Mixed-Use Scheme",
-    category: "Retail & Residential",
-    description:
-      "Interior systems and suspended ceilings across retail and residential units.",
-    image: IMAGE_2,
-  },
-  {
-    title: "Infrastructure Project",
-    category: "Large-scale",
-    description:
-      "Steel framed systems and facades for a major infrastructure development.",
-    image: IMAGE_3,
-  },
-];
+import { FEATURED_PROJECTS, type Project } from "../data/projects";
+import { ProjectCard } from "./ProjectCard";
+import { ProjectModal } from "./ProjectModal";
 
 export function Projects() {
+  const [activeProject, setActiveProject] = useState<Project | null>(null);
+
   return (
     <section
       className="relative w-full py-20 lg:py-28 bg-gray-50"
@@ -56,55 +35,19 @@ export function Projects() {
             Our projects
           </h2>
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-            A selection of commercial drylining and fit-out projects we have
-            delivered.
+            A selection of the residential, healthcare, education and specialist
+            schemes we have delivered for the UK's leading contractors.
           </p>
         </header>
 
         {/* Project cards – consistent with Services card treatment */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {PROJECTS.map((project, index) => (
-            <article
-              key={index}
-              className="group relative flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:-translate-y-0.5 focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 focus-within:ring-offset-gray-50"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                />
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  aria-hidden
-                />
-                <span
-                  className="absolute top-4 left-4 flex h-8 w-8 items-center justify-center rounded-lg bg-secondary text-sm font-semibold text-tertiary shadow-sm"
-                  aria-hidden
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
-
-              <div className="relative flex flex-1 flex-col p-6 sm:p-7 bg-tertiary border-l-4 border-secondary">
-                <h3 className="text-xl font-bold tracking-tight text-white mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 text-[15px] leading-relaxed flex-1 mb-5">
-                  {project.description}
-                </p>
-                <Link
-                  to="/projects"
-                  className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:text-primary-100 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-tertiary rounded-md py-1 -ml-1 transition-colors duration-200"
-                >
-                  <span>View project</span>
-                  <ArrowUpRight
-                    className="h-4 w-4 shrink-0"
-                    strokeWidth={2.5}
-                  />
-                </Link>
-              </div>
-            </article>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {FEATURED_PROJECTS.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              onOpen={setActiveProject}
+            />
           ))}
         </div>
 
@@ -119,6 +62,11 @@ export function Projects() {
           </Link>
         </div>
       </div>
+
+      <ProjectModal
+        project={activeProject}
+        onClose={() => setActiveProject(null)}
+      />
     </section>
   );
 }

@@ -49,7 +49,7 @@ export function About() {
                 to provide structured, compliant, and programme-driven solutions.
                 From office blocks and retail units to residential developments
                 and private commissions, we understand the demands of each
-                sector — tight deadlines, strict specifications, and zero margin
+                sector, tight deadlines, strict specifications, and zero margin
                 for error.
               </p>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">

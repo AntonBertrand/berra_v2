@@ -46,7 +46,7 @@ export function CTASection() {
           </h2>
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8">
             From office fit-outs and retail refurbishments to new-build
-            partitioning and suspended ceilings—get a no-obligation quote. We
+            partitioning and suspended ceilings, get a no-obligation quote. We
             deliver on time, on spec, and on budget.
           </p>
 

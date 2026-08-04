@@ -50,7 +50,7 @@ export function Services() {
       id: "specialist-fit-out",
       title: "Specialist fit-out items",
       description:
-        "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls—including glazing partitions and acoustic panels—we deliver tailored solutions to specification.",
+        "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls, including glazing partitions and acoustic panels, we deliver tailored solutions to specification.",
       image: SERVICE_IMAGES[5],
     },
   ];

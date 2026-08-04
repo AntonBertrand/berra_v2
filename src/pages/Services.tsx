@@ -20,7 +20,7 @@ const EXPANDED_SERVICES = [
     image: SERVICE_IMAGES[0],
     content: [
       "We design and install drywall (plasterboard) systems for partitions, wall linings and soffits across commercial and residential projects. Our teams work to your programme and specification, from single-layer systems to high-performance fire and acoustic assemblies.",
-      "We offer a full range of board types—standard, moisture-resistant, fire-rated and acoustic—and finishes including jointing and skim, or paint-ready. Whether you need simple linings or complex multi-layer partitions, we provide a single point of responsibility for supply, installation and finishing.",
+      "We offer a full range of board types, standard, moisture-resistant, fire-rated and acoustic, and finishes including jointing and skim, or paint-ready. Whether you need simple linings or complex multi-layer partitions, we provide a single point of responsibility for supply, installation and finishing.",
     ],
     points: [
       "Partition and lining systems to meet fire and acoustic requirements",
@@ -96,10 +96,10 @@ const EXPANDED_SERVICES = [
     id: "specialist-fit-out",
     title: "Specialist fit-out items",
     summary:
-      "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls—including glazing partitions and acoustic panels—we deliver tailored solutions to specification.",
+      "Bespoke fit-out and joinery for commercial and high-spec interiors. From reception areas to feature walls, including glazing partitions and acoustic panels, we deliver tailored solutions to specification.",
     image: SERVICE_IMAGES[5],
     content: [
-      "Our specialist fit-out and joinery service covers bespoke elements for commercial and high-spec interiors—reception desks, feature walls, panelling, bulkheads, glazing partitions, acoustic panels and other made-to-order items. We work from your design or specification to produce tailored solutions that align with the overall interior package.",
+      "Our specialist fit-out and joinery service covers bespoke elements for commercial and high-spec interiors, reception desks, feature walls, panelling, bulkheads, glazing partitions, acoustic panels and other made-to-order items. We work from your design or specification to produce tailored solutions that align with the overall interior package.",
       "We manage material selection, manufacture and installation, and we coordinate with base build and other fit-out trades. The result is a cohesive interior where specialist items are delivered to the right quality and programme.",
     ],
     points: [
@@ -261,7 +261,7 @@ const Services = () => {
             </div>
           </div>
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-            From drywall and partitioning to suspended ceilings, SFS, facades and specialist fit-out—we deliver end-to-end solutions for commercial and residential projects.
+            From drywall and partitioning to suspended ceilings, SFS, facades and specialist fit-out, we deliver end-to-end solutions for commercial and residential projects.
           </p>
         </div>
       </section>
