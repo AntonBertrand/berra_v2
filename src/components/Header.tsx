@@ -7,6 +7,13 @@ const SCROLL_THRESHOLD = 20;
 const LINKEDIN_URL = "https://www.linkedin.com/company/berra-ltd/";
 const INSTAGRAM_URL = "https://www.instagram.com/berra_ltd";
 
+const MOBILE_LINKS = [
+  { to: "/", label: "Home", end: true },
+  { to: "/services", label: "Services", end: false },
+  { to: "/projects", label: "Projects", end: false },
+  { to: "/contact", label: "Contact", end: false },
+];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,21 +27,25 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerBg = isScrolled ? "bg-white shadow-sm" : "bg-transparent";
+  const headerBg = isMenuOpen
+    ? "bg-white shadow-sm"
+    : isScrolled
+      ? "bg-white/80 backdrop-blur-md shadow-sm lg:bg-white lg:backdrop-blur-none"
+      : "bg-transparent";
 
   return (
     <header
       className={`sticky top-0 left-0 right-0 z-50 text-gray-900 transition-[background-color,box-shadow] duration-300 ${headerBg}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-14 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2">
             <Link
               to="/"
               className="text-2xl font-bold !text-gray-900 transition-colors uppercase"
             >
-              <img src={LOGO} className="w-80 p-8" />
+              <img src={LOGO} alt="Berra" className="w-32 sm:w-40 lg:w-80 lg:p-8" />
             </Link>
           </div>
 
@@ -142,70 +153,59 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2.5 rounded-lg bg-primary hover:bg-primary-50 text-white transition-colors"
+            className="lg:hidden flex items-center justify-center h-10 w-10 rounded-full bg-primary hover:bg-primary-50 text-white transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 ${
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isMenuOpen
-              ? "max-h-[500px] opacity-100 pb-4"
+              ? "max-h-[400px] opacity-100 pb-3"
               : "max-h-0 opacity-0 pb-0"
           }`}
         >
-          <div className="flex flex-col items-center text-center space-y-2 pt-4">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `px-4 py-2 text-white hover:bg-gray-800 rounded ${isActive ? "underline decoration-2 decoration-secondary" : ""}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `px-4 py-2 text-white hover:bg-gray-800 rounded ${isActive ? "underline decoration-2 decoration-secondary" : ""}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </NavLink>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                `px-4 py-2 text-white hover:bg-gray-800 rounded ${isActive ? "underline decoration-2 decoration-secondary" : ""}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projects
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `px-4 py-2 text-white hover:bg-gray-800 rounded ${isActive ? "underline decoration-2 decoration-secondary" : ""}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </NavLink>
-            <div className="pt-4 px-4 w-full flex flex-col items-center gap-4">
-              <div className="flex items-center gap-3">
+          <nav className="flex flex-col gap-1 p-2 bg-white rounded-2xl border border-gray-100 shadow-lg">
+            {MOBILE_LINKS.map(({ to, label, end }) => (
+              <NavLink
+                key={to}
+                to={to}
+                end={end}
+                className={({ isActive }) =>
+                  `flex items-center justify-between px-4 py-2.5 rounded-xl text-[15px] font-medium transition-colors ${
+                    isActive
+                      ? "bg-primary/10 !text-primary"
+                      : "!text-gray-900 hover:bg-gray-50 hover:!text-primary"
+                  }`
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {({ isActive }) => (
+                  <>
+                    {label}
+                    {isActive && (
+                      <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                    )}
+                  </>
+                )}
+              </NavLink>
+            ))}
+            <div className="md:hidden flex items-center justify-between gap-2 mt-1 pt-3 px-2 pb-1 border-t border-gray-100">
+              <div className="flex items-center gap-1">
                 <a
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 !text-primary hover:bg-gray-800 rounded-lg transition-colors"
+                  className="p-2 rounded-full hover:bg-primary/10 transition-colors"
                   aria-label="LinkedIn"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -215,7 +215,7 @@ export function Header() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 !text-primary hover:bg-gray-800 rounded-lg transition-colors"
+                  className="p-2 rounded-full hover:bg-primary/10 transition-colors"
                   aria-label="Instagram"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -224,14 +224,14 @@ export function Header() {
               </div>
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-50 text-white px-6 py-3 rounded-lg transition-colors"
+                className="flex items-center gap-1.5 bg-primary hover:bg-primary-50 text-white text-sm font-medium px-4 py-2 rounded-full transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
